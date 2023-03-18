@@ -9,10 +9,10 @@
 			onScrollFixed();
 			expandedMenu();
 
-
 			/// specific for homepage
 			if ($(b).hasClass('home')) {
-				
+				featuredProperties();
+				testiMonials();
 			}
 
 			AOS.init({ disable: 'mobile' });
@@ -72,8 +72,64 @@
 				$(b).removeClass('expandedShow');
 			});
 
+		}
+		featuredProperties = () => {
+
+			let fnProperties = new Splide('.fp-lists', {
+				type: 'loop',
+				perPage: 3,
+				perMove: 1,
+				pagination: false,
+				arrows: false,
+				interval: 8000,
+				autoplay: true,
+				breakpoints: {
+					991 : {
+						perPage: 1
+					},
+					
+				},
+				
+			});
+
+			fnProperties.mount();
+
+			$arrowButtons = $('.fp-pagination button');
+
+			$arrowButtons.on('click', function (e) {
+
+				e.preventDefault();
+				let $this = jQuery(this);
+				let type = $this.attr('data-arrow');
+
+				console.log(type);
+				// for prev
+				if (type == 'prev') {
+					fnProperties.go('<');
+				}
+				if (type == 'next') {
+					fnProperties.go('>');
+				}
+
+			});
 
 		}
+
+		testiMonials = () => { 
+
+			let testimonails = new Splide('.testi-lists', {
+				type: 'loop',
+				perPage: 1,
+				perMove: 1,
+				pagination: false,
+				interval: 8000,
+				autoplay: true,
+
+			});
+
+			testimonails.mount();
+		}
+
 
 		/**
 		 * Instantiate

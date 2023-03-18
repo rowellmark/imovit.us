@@ -19,15 +19,23 @@
     <?php do_action('aios_neighborhoods_header'); ?>
 
 
-	<header class="header">
-		<div class="container">
+	<header class="header fixed w-100">
+		<div class="max-container">
+			<nav class="navigation">
+				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'menu_class' => 'navi', 'theme_location' => 'primary-menu' ) ); ?>
+			</nav><!-- end of navigation -->
+		</div>
+	</header>
+
+	<header class="header fixed-header fixed w-100">
+		<div class="max-container flex justify-between items-center">
 			<div class="logo">
-				<a href="<?php echo esc_url( home_url() ) ?>" class="site-name"><?php bloginfo('name'); ?></a>
-			</div>
+				<a href="<?= do_shortcode('[blogurl]')?>" class="site-name"><img src="<?= do_shortcode('[stylesheet_directory]')?>/images/logo.png" alt="iMovit Real Estate Brokerage" class="block w-100"></a>
+			</div><!-- end of logo -->
 
 			<nav class="navigation">
-				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'menu_id' => 'nav', 'theme_location' => 'primary-menu' ) ); ?>
-			</nav>
+				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'menu_class' => 'navi', 'theme_location' => 'primary-menu' ) ); ?>
+			</nav><!-- end of navigation -->
 		</div>
 	</header>
 

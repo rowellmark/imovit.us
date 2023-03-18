@@ -3,16 +3,165 @@
  * Mobile styles and other media queries
  *
  *******************************************************/
+@media only screen and (max-width: 1440px) {
+	#hp-cta .cta-container .cta-title h2 {
+		font-size: 40px;
+	}
+	#hp-cta .cta-container .cta-title p{
+		font-size: 22px;
+	}
 
+	#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-content p{
+		padding: 10px 0;
+	}
+}
+
+
+@media only screen and (max-width: 1280px) {
+	#hp-testimonials .testimonials-slider{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-img {
+		width: 50%;
+
+	}
+
+	#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-content {
+		width: 50%;
+	}
+		#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-content p{
+			font-size: 13px;
+		}
+
+		#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-content h3{
+			font-size: 14px;
+			line-height: 1.6;
+		}
+}
  
 /* iPad(landscape) | iPad(landscape) | Galaxy Tab 4 (landscape) | Galaxy Tab 3 (landscape) */ 
 @media only screen and (max-width: 1199px) {
 
+	.default-title h2{
+		font-size: 18px;
+	}
+	.default-title h2 span{
+		font-size: 35px;
+	}
+
+	.header .navigation ul li a {
+		font-size: 12px;
+	}
+	.fixed-header .logo {
+		width: 100%;
+		max-width: 115px;
+	}
+
+	#hp-cta .cta-container .cta-title h2 {
+		font-size: 29px;
+	}
+
+	#hp-cta .cta-container .cta-title p {
+		font-size: 17px;
+	}
+
+	#hp-cta .cta-container .cta-list a h3{
+		font-size: 13px;
+	}
+
+	#hp-testimonials .testi-list p{
+		font-size: 12px;
+	}
+
+	#hp-newsletter-blog .newsletter-blog-wrap .blog-list{
+		flex-flow: column;
+	}
+		#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-img{
+			width: 100%;
+		}
+			#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-img canvas {
+				height: 200px;
+			}
+
+		#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-content{
+			width: 100%;
+		}
 } 
 
 /* iPad(portrait) | Galaxy Tab 4(portrait)  */ 
 @media only screen and (max-width: 991px) {
 	
+	.header{
+		display: none;
+	}
+
+	#hero .sliderLogo .max-container{
+		text-align: center;
+	}
+
+	#hp-cta {
+		padding: 14px 0 85px;
+	}
+		#hp-cta .cta-container{
+			flex-flow: column;
+		}
+			#hp-cta .cta-container .cta-title{
+				width: 100%;
+				padding-bottom: 30px;
+			}
+
+			#hp-cta .cta-container .cta-lists{
+				width: 100%;
+				flex-flow: column;
+			}
+				#hp-cta .cta-container .cta-list{
+					width: 100%;
+					padding: 10px;
+				}
+					#hp-cta .cta-container .cta-list a h3 {
+						font-size: 26px;
+					}
+
+	#hp-featured-communities .fc-title{
+		flex-flow: column;
+	}
+		#hp-featured-communities .fc-title .default-title {
+			padding-bottom: 25px;
+		}
+
+		#hp-featured-communities .fc-lists{
+			flex-flow: column;
+		}
+			#hp-featured-communities .fc-list{
+				width: 100%;
+			}
+	#hp-testimonials .max-container{
+		padding: 0;
+	}
+		#hp-testimonials .testimonials-container {
+			width: 100%;
+		}
+
+	#hp-newsletter-blog .max-container{
+		flex-flow: column;
+	}
+		#hp-newsletter-blog .newsletter-content{
+			width: 100%;
+		}
+
+		#hp-newsletter-blog .newsletter-blog-wrap{
+			width: 100%;
+			margin: 40px 0 0;
+		}
+
+	.footer .footer-menu ul{
+		flex-flow: column;
+	}
+		.footer .footer-menu ul li{
+			padding: 10px 0;
+		}
 	/* The following are used on inner pages. Please edit carefully. */
 
 	.inner {
@@ -33,9 +182,69 @@
 
 /* Galaxy Tab 3(portrait) | Galaxy S5(landscape) */ 
 @media only screen and (max-width: 767px) {
+
+	#hp-cta .max-container {
+		padding: 0 20px;
+	}
+
+	#hp-cta .cta-container .cta-title h2 {
+		font-size: 25px;
+	}
+
+	#hp-cta .cta-container .cta-lists{
+		margin: 0;
+	}
+	#hp-cta .cta-container .cta-list a h3 {
+		font-size: 16px;
+	}
+
+	#hp-featured-communities .fc-title{
+		padding: 0 40px;
+	}
+	#hp-featured-communities .fc-list a h3{
+		font-size: 16px;
+		padding: 20px 0;
+	}
+
+	#hp-featured-properties .fp-title{
+		padding: 40px;
+	}
+	#hp-featured-properties .fp-pagination {
+		padding: 56px 0;
+	}
+	#hp-testimonials .testimonials-title {
+		padding-left: 19%;
+	}
+	#hp-testimonials .testimonials-slider {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#hp-newsletter-blog .max-container{
+		padding: 0 30px;
+	}
+		#hp-newsletter-blog .newsletter-content{
+			padding: 50px 0 0;
+		}
+	#hp-newsletter-blog .newsletter-blog-wrap .blog-list .blog-content{
+		padding: 20px;
+	}
     .ip-banner .container{
         width: 100%;
     }
+
+	.footer .footer-contact-info{
+		padding: 20px 0;
+	}
+	
+	.footer .footer-contact-info ul{
+		flex-flow: column;
+	}
+		.footer .footer-contact-info ul li{
+			padding: 10px 0;
+		}
+	.footer .footer-menu{
+		padding-top: 0;
+	}
 }
 
 /* Galaxy S5(portrait) | iPod Touch(landscape) | iPod Touch(portrait) */ 
